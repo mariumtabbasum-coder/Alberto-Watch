@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alberto Watch Company | Technology</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style/technology.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+            
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f8f4e9;
+    color: #171717;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+:root {
+
+    --black: #080808;
+
+    --black-light: #121212;
+
+    --gold: #c89b3c;
+
+    --gold-light: #e4bd69;
+
+    --gold-dark: #98701f;
+
+    --cream: #f8f4e9;
+
+    --cream-dark: #eee5d2;
+
+    --white: #ffffff;
+
+    --text: #202020;
+
+    --gray: #777777;
+
+}
+
+
+
+
+.navbar-custom {
+
+    width: 100%;
+
+    height: 74px;
+
+    background: #080808;
+
+    border-bottom: 1px solid rgba(200, 155, 60, 0.45);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 9999;
+
+}
+
+
+.nav-container {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    height: 100%;
+
+    margin: auto;
+
+    padding: 0 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+
+
+.brand-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 170px;
+
+}
+
+
+.crown {
+
+    color: var(--gold-light);
+
+    font-size: 27px;
+
+    line-height: 1;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.brand-text span {
+
+    color: var(--gold-light);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    line-height: 20px;
+
+}
+
+
+.brand-text small {
+
+    color: #d4d4d4;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+}
+
+
+
+
+.nav-menu {
+
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 27px;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.nav-menu li {
+    position: relative;
+    height: 74px;
+}
+
+.nav-menu li a {
+    display: block;
+    color: #eeeeee;
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: 0.3s ease;
+    padding: 27px 0;
+    height: 74px;
+    box-sizing: border-box;
+}
+
+.nav-menu li a:hover {
+    color: var(--gold-light);
+}
+
+.nav-menu li a.active {
+    color: var(--gold-light);
+}
+
+.nav-menu li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--gold);
+}
+
+.nav-menu i {
+
+    font-size: 9px;
+
+    margin-left: 3px;
+
+}
+
+
+.home-visitor-counter {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border: 1px solid var(--home-gold-dark);
+
+    border-radius: 4px;
+
+    white-space: nowrap;
+
+}
+
+
+.home-visitor-counter i {
+
+    color: var(--home-gold);
+
+    font-size: 12px;
+
+}
+
+
+.home-visitor-counter span {
+
+    color: #dddddd;
+
+    font-size: 9px;
+
+}
+
+
+.home-visitor-counter strong {
+
+    color: var(--home-gold-light);
+
+    font-size: 10px;
+
+}
+
+
+
+.dropdown-box {
+
+    position: absolute;
+
+    top: 62px;
+
+    left: -20px;
+
+    width: 190px;
+
+    background: #111111;
+
+    border: 1px solid rgba(200, 155, 60, 0.4);
+
+    padding: 10px 0;
+
+    display: none;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+
+.dropdown-box a {
+
+    display: block;
+
+    padding: 12px 18px !important;
+
+    color: #eeeeee !important;
+
+}
+
+
+.dropdown-box a:hover {
+
+    background: #1d1d1d;
+
+    color: var(--gold-light) !important;
+
+}
+
+
+.dropdown-menu-custom:hover .dropdown-box {
+
+    display: block;
+
+}
+
+
+
+
+.visitor-counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid var(--gold-dark);
+    border-radius: 4px;
+
+    padding: 7px 12px;
+
+    color: var(--gold-light);
+    background: transparent;
+
+    white-space: nowrap;
+}
+
+.visitor-counter i {
+    font-size: 15px;
+    color: var(--gold);
+}
+
+.visitor-counter span {
+    font-size: 11px;
+    color: #dddddd;
+}
+
+.visitor-counter strong {
+    font-size: 12px;
+    color: var(--gold-light);
+    font-weight: 700;
+}
+
+
+#menu-toggle {
+
+    display: none;
+
+}
+
+
+.menu-icon {
+
+    display: none;
+
+    color: var(--gold-light);
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+
+.technology-hero {
+
+    min-height: 300px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border-bottom: 1px solid var(--gold-dark);
+
+}
+
+
+.hero-content {
+
+    padding: 50px 20px;
+
+}
+
+
+.hero-content h1 {
+
+    color: #ffffff;
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.hero-content p {
+
+    color: #e7d4a5;
+
+    font-size: clamp(15px, 2vw, 21px);
+
+    letter-spacing: 3px;
+
+    margin-bottom: 17px;
+
+}
+
+
+.gold-line {
+
+    width: 75px;
+
+    height: 3px;
+
+    background: var(--gold);
+
+    margin: auto;
+
+}
+
+
+
+.technology-section {
+
+    background: var(--cream);
+
+    padding: 65px 0 75px;
+
+}
+
+
+.section-heading {
+
+    max-width: 780px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+
+}
+
+
+.small-heading {
+
+    color: var(--gold-dark);
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+
+}
+
+
+.section-heading h2 {
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(27px, 4vw, 40px);
+
+    color: #171717;
+
+    margin-top: 10px;
+
+    margin-bottom: 14px;
+
+}
+
+
+.section-heading p {
+
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+}
+
+
+
+.technology-row {
+
+    row-gap: 25px;
+
+}
+
+
+
+.technology-card {
+
+    height: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #ded6c5;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    box-shadow: 0 6px 18px rgba(38, 28, 10, 0.08);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+}
+
+
+.technology-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(38, 28, 10, 0.15);
+
+    border-color: var(--gold);
+
+}
+
+
+
+.watch-image {
+
+    width: 100%;
+
+    height: 230px;
+
+    background: #151515;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+.watch-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.technology-card:hover .watch-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+
+
+.card-content {
+
+    text-align: center;
+
+    padding: 20px 18px 24px;
+
+}
+
+
+.technology-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    margin: -42px auto 13px;
+
+    background: var(--gold);
+
+    border: 3px solid #ffffff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    color: #161616;
+
+    font-size: 18px;
+
+}
+
+
+.card-content h3 {
+
+    font-family: "Cinzel", serif;
+
+    color: #171717;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+}
+
+
+.card-content p {
+
+    color: #6d6d6d;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    min-height: 62px;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+
+.learn-btn {
+
+    border: none;
+
+    background: var(--gold);
+
+    color: #151515;
+
+    padding: 9px 18px;
+
+    border-radius: 3px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.learn-btn i {
+
+    margin-left: 5px;
+
+}
+
+
+.learn-btn:hover {
+
+    background: #a97b24;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+
+.technology-detail {
+
+    background: #111111;
+
+    padding: 55px 0;
+
+}
+
+
+.detail-box {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    border: 1px solid rgba(200, 155, 60, 0.4);
+
+    background: #151515;
+
+    padding: 30px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.detail-icon {
+
+    min-width: 65px;
+
+    height: 65px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--gold-light);
+
+    font-size: 28px;
+
+}
+
+
+.detail-box h2 {
+
+    color: var(--gold-light);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.detail-box p {
+
+    color: #c6c6c6;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+}
+
+
+
+
+.footer {
+
+    background: #080808;
+
+    border-top: 1px solid rgba(200, 155, 60, 0.4);
+
+    padding: 55px 0 0;
+
+}
+
+
+.footer-row {
+
+    row-gap: 35px;
+
+}
+
+
+.footer-brand {
+
+    padding-right: 25px;
+
+}
+
+
+.footer-crown {
+
+    color: var(--gold);
+
+    font-size: 30px;
+
+}
+
+
+.footer-brand h2 {
+
+    font-family: "Cinzel", serif;
+
+    color: var(--gold-light);
+
+    letter-spacing: 3px;
+
+    font-size: 24px;
+
+    margin: 0;
+
+}
+
+
+.footer-brand span {
+
+    color: #aaaaaa;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.footer-brand p {
+
+    color: #888888;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-top: 15px;
+
+    max-width: 300px;
+
+}
+
+
+
+
+.footer-links h3 {
+
+    color: var(--gold-light);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 16px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.footer-links a {
+
+    display: block;
+
+    color: #999999;
+
+    font-size: 12px;
+
+    margin-bottom: 11px;
+
+    transition: 0.3s;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--gold-light);
+
+    padding-left: 4px;
+
+}
+
+
+.footer-links p {
+
+    color: #888888;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+
+
+.social-icons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 17px;
+
+}
+
+
+.social-icons a {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 1px solid #6d531f;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--gold-light);
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.social-icons a:hover {
+
+    background: var(--gold);
+
+    color: #111111;
+
+    padding: 0;
+
+}
+
+
+
+.footer-bottom {
+
+    margin-top: 45px;
+
+    padding: 18px 0;
+
+    border-top: 1px solid #242424;
+
+    text-align: center;
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 10px;
+
+}
+
+
+
+
+@media screen and (max-width: 1250px) {
+
+    .nav-container {
+
+        padding: 0 20px;
+
+    }
+
+    .nav-menu {
+
+        gap: 17px;
+
+    }
+
+    .nav-menu li a {
+
+        font-size: 11px;
+
+    }
+
+    .nav-right {
+
+        gap: 9px;
+
+    }
+
+    .login-btn {
+
+        padding: 6px 9px;
+
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 991px) {
+
+    .navbar-custom {
+
+        height: 70px;
+
+    }
+
+
+    .nav-container {
+
+        padding: 0 22px;
+
+    }
+
+
+    .menu-icon {
+
+        display: block;
+
+        margin-left: auto;
+
+        margin-right: 15px;
+
+        order: 3;
+
+    }
+
+
+    .nav-right {
+
+        order: 2;
+
+        min-width: auto;
+
+    }
+.visitor-counter {
+        padding: 6px 10px;
+        gap: 6px;
+    }
+
+    .visitor-counter i {
+        font-size: 14px;
+    }
+
+    .visitor-counter span {
+        font-size: 10px;
+    }
+
+    .visitor-counter strong {
+        font-size: 11px;
+    }
+
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #080808;
+
+        border-top: 1px solid #332713;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 12px 25px 20px;
+
+    }
+
+
+    .nav-menu li {
+
+        width: 100%;
+
+    }
+
+
+    .nav-menu li a {
+
+        display: block;
+
+        padding: 13px 5px;
+
+        border-bottom: 1px solid #222222;
+
+    }
+
+
+    .nav-menu li a.active::after {
+
+        display: none;
+
+    }
+
+
+    #menu-toggle:checked ~ .nav-menu {
+
+        display: flex;
+
+    }
+
+
+    .dropdown-box {
+
+        position: static;
+
+        width: 100%;
+
+        border: none;
+
+        box-shadow: none;
+
+        background: #111111;
+
+    }
+
+
+    .dropdown-menu-custom:hover .dropdown-box {
+
+        display: block;
+
+    }
+
+
+    .technology-hero {
+
+        min-height: 270px;
+
+    }
+
+
+    .technology-section {
+
+        padding: 55px 0 65px;
+
+    }
+
+
+    .watch-image {
+
+        height: 220px;
+
+    }
+
+
+    .detail-box {
+
+        margin: 0 15px;
+
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    .navbar-custom {
+
+        height: 65px;
+
+    }
+
+
+    .nav-container {
+
+        padding: 0 15px;
+
+    }
+
+
+    .brand-logo {
+
+        min-width: auto;
+
+    }
+
+
+    .brand-text span {
+
+        font-size: 17px;
+
+    }
+
+
+    .brand-text small {
+
+        font-size: 6px;
+
+    }
+
+
+    .crown {
+
+        font-size: 23px;
+
+    }
+
+
+    .nav-right {
+
+        gap: 8px;
+
+    }
+.visitor-counter {
+        padding: 6px 8px;
+        gap: 5px;
+        border-radius: 4px;
+    }
+
+    .visitor-counter i {
+        font-size: 13px;
+    }
+
+    .visitor-counter span {
+        font-size: 9px;
+    }
+
+    .visitor-counter strong {
+        font-size: 10px;
+    }
+
+
+
+    .menu-icon {
+
+        margin-right: 0;
+
+    }
+
+
+    .nav-menu {
+
+        top: 65px;
+
+    }
+
+
+    .technology-hero {
+
+        min-height: 240px;
+
+    }
+
+
+    .hero-content {
+
+        padding: 35px 15px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 13px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .technology-section {
+
+        padding: 45px 15px 55px;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .section-heading p {
+
+        font-size: 12px;
+
+    }
+
+
+    .technology-row {
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+    }
+
+
+    .watch-image {
+
+        height: 260px;
+
+    }
+
+
+    .technology-card {
+
+        max-width: 420px;
+
+        margin: auto;
+
+    }
+
+
+    .card-content h3 {
+
+        font-size: 19px;
+
+    }
+
+
+    .card-content p {
+
+        font-size: 12px;
+
+    }
+
+
+    .detail-box {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 20px;
+
+    }
+
+
+    .detail-icon {
+
+        margin: auto;
+
+    }
+
+
+    .detail-box h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .detail-box p {
+
+        font-size: 12px;
+
+    }
+
+
+    .footer {
+
+        padding-top: 45px;
+
+    }
+
+
+    .footer-brand {
+
+        padding-right: 0;
+
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+
+    .brand-text span {
+
+        font-size: 15px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .brand-text small {
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .crown {
+
+        font-size: 20px;
+
+    }
+
+
+    .nav-right {
+
+        gap: 4px;
+
+    }
+.visitor-counter {
+        padding: 5px 7px;
+        gap: 4px;
+    }
+
+    .visitor-counter i {
+        font-size: 12px;
+    }
+
+    .visitor-counter span {
+        font-size: 8px;
+    }
+
+    .visitor-counter strong {
+        font-size: 9px;
+    }
+
+    .menu-icon {
+
+        font-size: 25px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 11px;
+
+    }
+
+
+    .watch-image {
+
+        height: 230px;
+
+    }
+
+}
+        </style>
+</head>
+
+<body>
+
+
+   <nav class="navbar-custom">
+
+        <div class="nav-container">
+
+            <a href="#" class="brand-logo">
+
+                <div class="crown">
+                    ♛
+                </div>
+
+                <div class="brand-text">
+                    <span>ALBERTO</span>
+                    <small>WATCH COMPANY</small>
+                </div>
+
+            </a>
+
+
+    
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="menu-icon">
+                <i class="bi bi-list"></i>
+            </label>
+
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="index.html">
+                Home
+            </a>
+                </li>
+
+                <li class="dropdown-menu-custom">
+
+                    <a href="#">
+                        Products
+                        <i class="bi bi-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-box">
+
+                        <a href="#">Luxury Watches</a>
+                        <a href="#">Classic Watches</a>
+                        <a href="#">Smart Watches</a>
+
+                    </div>
+
+                </li>
+                <li>
+        <a href="price-list.html">Price List</a>
+    </li>
+
+                <li>
+                    <a href="technology.html" class="active">
+                        Technology
+                    </a>
+                </li>
+
+                <li>
+                    <a href="store-locator.html">
+                        Store Locator
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">Support</a>
+                </li>
+
+                <li>
+                    <a href="#">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+
+                <li>
+                    <a href="site-map.html">
+                        Site Map
+                    </a>
+                </li>
+
+            </ul>
+
+<div class="nav-right">
+
+    <!-- VISITOR COUNTER -->
+    <div class="visitor-counter">
+
+        <i class="fa-solid fa-users"></i>
+
+        <span>Visitors</span>
+
+        <strong>1250</strong>
+
+    </div>
+
+</div>
+        
+        </div>
+
+    </nav>
+
+ 
+
+    <section class="technology-hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Watch Technology
+            </h1>
+
+            <p>
+                Innovation Meets Precision
+            </p>
+
+            <div class="gold-line"></div>
+
+        </div>
+
+    </section>
+
+
+    
+    <section class="technology-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="small-heading">
+                    ALBERTO WATCH COMPANY
+                </span>
+
+                <h2>
+                    Precision Behind Every Timepiece
+                </h2>
+
+                <p>
+                    Discover the innovative technologies that power our
+                    watches. From traditional mechanical movements to
+                    advanced smart features, every Alberto timepiece
+                    combines craftsmanship with precision.
+                </p>
+
+            </div>
+
+
+            
+
+            <div class="row technology-row">
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+
+                    <div class="technology-card">
+
+                        <div class="watch-image">
+
+                            <img
+                                src="https://zudii.com/storage/stores/khrist/chatgpt-image-dec-27-2025-01-10-12-pm-1.png"
+                                alt="Automatic Mechanical Watch">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="technology-icon">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </div>
+
+                            <h3>
+                                Automatic Movement
+                            </h3>
+
+                            <p>
+                                Mechanical watches powered by the
+                                natural movement of your wrist without
+                                requiring a traditional battery.
+                            </p>
+
+                            <button class="learn-btn"
+                                onclick="showTechnology('Automatic Movement')">
+
+                                Learn More
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+
+                    <div class="technology-card">
+
+                        <div class="watch-image">
+
+                            <img
+                                src="https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/545809757d04446bb9b849f0111a9f35~tplv-fhlh96nyum-resize-webp%3A800%3A1067.webp?dr=12190&from=2378011839&idc=useast5&ps=933b5bde&shcp=948674b7&shp=8dbd94bf&t=555f072d"
+                                alt="Quartz Watch">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="technology-icon">
+                                <i class="bi bi-battery-charging"></i>
+                            </div>
+
+                            <h3>
+                                Quartz Technology
+                            </h3>
+
+                            <p>
+                                Highly accurate watches powered by
+                                battery-driven quartz technology for
+                                dependable everyday timekeeping.
+                            </p>
+
+                            <button class="learn-btn"
+                                onclick="showTechnology('Quartz Technology')">
+
+                                Learn More
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+
+                    <div class="technology-card">
+
+                        <div class="watch-image">
+
+                            <img
+                                src="https://hips.hearstapps.com/hmg-prod/images/57561b53-c29d-4a2c-a99c-c75c7880d114.jpg?crop=0.5xw:1xh;center,top&resize=640:*"
+                                alt="Eco Drive Watch">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="technology-icon">
+                                <i class="bi bi-sun"></i>
+                            </div>
+
+                            <h3>
+                                Eco-Drive Technology
+                            </h3>
+
+                            <p>
+                                Innovative technology that converts
+                                light into energy, helping your watch
+                                operate without regular battery changes.
+                            </p>
+
+                            <button class="learn-btn"
+                                onclick="showTechnology('Eco-Drive Technology')">
+
+                                Learn More
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+
+                    <div class="technology-card">
+
+                        <div class="watch-image">
+
+                            <img
+                                src="https://cdn.shopify.com/s/files/1/0705/1132/9454/files/ChatGPT_Image_7_de_mai._de_2026_17_16_52.png?v=1778190709"
+                                alt="Smart Watch">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="technology-icon">
+                                <i class="bi bi-watch"></i>
+                            </div>
+
+                            <h3>
+                                Smart Watch Technology
+                            </h3>
+
+                            <p>
+                                Modern digital features combine
+                                technology, connectivity and everyday
+                                convenience in one intelligent timepiece.
+                            </p>
+
+                            <button class="learn-btn"
+                                onclick="showTechnology('Smart Watch Technology')">
+
+                                Learn More
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="technology-detail">
+
+        <div class="container">
+
+            <div class="detail-box">
+
+                <div class="detail-icon">
+
+                    <i class="bi bi-clock-history"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Innovation Meets Precision
+                    </h2>
+
+                    <p>
+                        Every Alberto watch represents a balance between
+                        traditional watchmaking and modern innovation.
+                        Our technologies are designed to provide
+                        accuracy, reliability and timeless performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row footer-row">
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="footer-brand">
+
+                        <div class="footer-crown">
+                            ♛
+                        </div>
+
+                        <h2>
+                            ALBERTO
+                        </h2>
+
+                        <span>
+                            WATCH COMPANY
+                        </span>
+
+                        <p>
+                            Crafting timeless watches with precision,
+                            elegance and innovation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-2 col-md-6 col-sm-6">
+
+                    <div class="footer-links">
+
+                        <h3>
+                            Quick Links
+                        </h3>
+
+                        <a href="#">Home</a>
+                        <a href="#">Products</a>
+                        <a href="technology.html">Technology</a>
+                        <a href="store-locator.html">Store Locator</a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+
+                    <div class="footer-links">
+
+                        <h3>
+                            Support
+                        </h3>
+
+                        <a href="#">Customer Support</a>
+                        <a href="#">Warranty</a>
+                        <a href="#">Care Guide</a>
+                        <a href="#">Contact Us</a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+
+                    <div class="footer-links">
+
+                        <h3>
+                            Follow Us
+                        </h3>
+
+                        <p>
+                            Stay connected with Alberto Watch Company.
+                        </p>
+
+                        <div class="social-icons">
+
+                            <a href="#">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Alberto Watch Company.
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="technology.js"></script>
+
+</body>
+
+</html>

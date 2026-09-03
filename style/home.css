@@ -1,0 +1,3601 @@
+/* =========================================================
+                    GENERAL SETTINGS
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f8f4e9;
+    color: #171717;
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+button {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+:root {
+
+    --black: #080808;
+    --black-light: #111111;
+
+    --gold: #c89b3c;
+    --gold-light: #e5bd69;
+    --gold-dark: #98701f;
+
+    --cream: #f8f4e9;
+    --cream-dark: #eee5d2;
+
+    --white: #ffffff;
+
+    --gray: #777777;
+}
+
+/* =========================================================
+                         NAVBAR
+========================================================= */
+
+.navbar-custom {
+
+    width: 100%;
+
+    height: 74px;
+
+    background: #080808;
+
+    border-bottom: 1px solid rgba(200, 155, 60, 0.45);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 9999;
+
+}
+
+
+.nav-container {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    height: 100%;
+
+    margin: auto;
+
+    padding: 0 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =========================================================
+                            LOGO
+========================================================= */
+
+.brand-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 170px;
+
+}
+
+
+.crown {
+
+    color: var(--gold-light);
+
+    font-size: 27px;
+
+    line-height: 1;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.brand-text span {
+
+    color: var(--gold-light);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    line-height: 20px;
+
+}
+
+
+.brand-text small {
+
+    color: #d4d4d4;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+                         NAV MENU
+========================================================= */
+
+.nav-menu {
+
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 27px;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.nav-menu li {
+
+    position: relative;
+
+    height: 74px;
+
+}
+
+
+.nav-menu li a {
+
+    display: block;
+
+    color: #eeeeee;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+
+    padding: 27px 0;
+
+    height: 74px;
+
+    box-sizing: border-box;
+
+}
+
+
+.nav-menu li a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.nav-menu li a.active {
+
+    color: var(--gold-light);
+
+}
+
+
+.nav-menu li a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background: var(--gold);
+
+}
+
+
+.nav-menu i {
+
+    font-size: 9px;
+
+    margin-left: 3px;
+
+}
+
+
+/* =========================================================
+                         DROPDOWN
+========================================================= */
+
+.dropdown-box {
+
+    position: absolute;
+
+    top: 62px;
+
+    left: -20px;
+
+    width: 190px;
+
+    background: #111111;
+
+    border: 1px solid rgba(200, 155, 60, 0.4);
+
+    padding: 10px 0;
+
+    display: none;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+
+.dropdown-box a {
+
+    display: block;
+
+    padding: 12px 18px !important;
+
+    color: #eeeeee !important;
+
+}
+
+
+.dropdown-box a:hover {
+
+    background: #1d1d1d;
+
+    color: var(--gold-light) !important;
+
+}
+
+
+.dropdown-menu-custom:hover .dropdown-box {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+                      NAV RIGHT
+========================================================= */
+
+.nav-right {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+}
+
+
+/* =========================================================
+                    VISITOR COUNTER
+========================================================= */
+
+.visitor-counter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border: 1px solid var(--gold-dark);
+
+    border-radius: 4px;
+
+    padding: 7px 12px;
+
+    color: var(--gold-light);
+
+    background: transparent;
+
+    white-space: nowrap;
+
+}
+
+
+.visitor-counter i {
+
+    font-size: 15px;
+
+    color: var(--gold);
+
+}
+
+
+.visitor-counter span {
+
+    font-size: 11px;
+
+    color: #dddddd;
+
+}
+
+
+.visitor-counter strong {
+
+    font-size: 12px;
+
+    color: var(--gold-light);
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+                      MOBILE MENU
+========================================================= */
+
+#menu-toggle {
+
+    display: none;
+
+}
+
+
+.menu-icon {
+
+    display: none;
+
+    color: var(--gold-light);
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+/* =========================================================
+                       HERO SECTION
+========================================================= */
+
+.hero {
+
+    height: 330px;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.88),
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.20)
+        ),
+
+        url("https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+
+    background-position: center 45%;
+
+    overflow: hidden;
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 55%,
+            rgba(0,0,0,0.45)
+        );
+}
+
+
+.hero-container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 40px;
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 570px;
+}
+
+
+.hero-small {
+
+    color: var(--gold-light);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+.hero-content h1 {
+
+    color: white;
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(38px, 5vw, 55px);
+
+    font-weight: 500;
+
+    line-height: 1.08;
+
+    margin-bottom: 12px;
+}
+
+
+.hero-description {
+
+    color: #dddddd;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    max-width: 340px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: var(--gold);
+
+    color: #111111;
+
+    padding: 10px 17px;
+
+    border-radius: 2px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.hero-btn:hover {
+
+    background: var(--gold-light);
+
+    transform: translateY(-2px);
+}
+
+
+/* HERO ARROWS */
+
+.hero-arrow {
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+.hero-left {
+
+    left: 15px;
+}
+
+
+.hero-right {
+
+    right: 15px;
+}
+
+
+/* HERO DOTS */
+
+.hero-dots {
+
+    position: absolute;
+
+    z-index: 5;
+
+    bottom: 10px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #dddddd;
+}
+
+
+.active-dot {
+
+    width: 19px;
+
+    border-radius: 5px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================================
+                    CATEGORY SECTION
+========================================================= */
+
+.categories {
+
+    background: var(--cream);
+
+    padding: 12px 20px;
+
+    border-bottom: 1px solid #e4ddcd;
+}
+
+
+.category-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    align-items: center;
+}
+
+
+.category-box {
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border-right: 1px solid #ded5c2;
+
+    color: #252525;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.category-box:last-child {
+
+    border-right: none;
+}
+
+
+.category-box i {
+
+    color: #98701f;
+
+    font-size: 17px;
+}
+
+
+.category-box:hover {
+
+    color: var(--gold-dark);
+
+    background: #f1e6ce;
+}
+
+
+/* =========================================================
+                    INTRODUCTION
+========================================================= */
+
+.introduction {
+
+    background: var(--cream);
+
+    padding: 25px 20px 30px;
+}
+
+
+.intro-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.section-title {
+
+    text-align: center;
+}
+
+
+.section-title > span {
+
+    color: var(--gold-dark);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.section-title h2 {
+
+    font-family: "Cinzel", serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    margin-top: 5px;
+
+    color: #171717;
+}
+
+
+.section-title p {
+
+    color: #777777;
+
+    font-size: 9px;
+
+    margin-top: 4px;
+}
+
+
+.gold-line {
+
+    width: 45px;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    margin: 8px auto;
+}
+
+
+.intro-text {
+
+    color: #666666;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+                    FEATURED SECTION
+========================================================= */
+
+.featured {
+
+    background: var(--cream);
+
+    padding: 5px 20px 25px;
+}
+
+
+.section-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+.watch-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+                      WATCH CARD
+========================================================= */
+
+.watch-card {
+
+    background: #ffffff;
+
+    border: 1px solid #ded7c8;
+
+    border-radius: 3px;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 3px 10px rgba(50,40,20,0.07);
+}
+
+
+.watch-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--gold);
+
+    box-shadow: 0 10px 20px rgba(60,45,10,0.14);
+}
+
+
+/* WATCH IMAGE */
+
+.watch-image {
+
+    width: 100%;
+
+    height: 155px;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+
+.watch-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s ease;
+}
+
+
+.watch-card:hover .watch-image img {
+
+    transform: scale(1.05);
+}
+
+
+/* WATCH CONTENT */
+
+.watch-content {
+
+    text-align: center;
+
+    padding: 8px 8px 10px;
+}
+
+
+.watch-content h3 {
+
+    color: #222222;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 11px;
+
+    margin-bottom: 3px;
+}
+
+
+.watch-type {
+
+    display: block;
+
+    color: #888888;
+
+    font-size: 7px;
+
+    margin-bottom: 3px;
+}
+
+
+.watch-content strong {
+
+    display: block;
+
+    color: #222222;
+
+    font-size: 9px;
+
+    margin-bottom: 8px;
+}
+
+
+.watch-btn {
+
+    display: inline-block;
+
+    background: var(--gold);
+
+    color: #171717;
+
+    padding: 5px 15px;
+
+    border-radius: 2px;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.watch-btn:hover {
+
+    background: var(--gold-dark);
+
+    color: white;
+}
+
+
+/* =========================================================
+                    TECHNOLOGY BANNER
+========================================================= */
+
+.technology-banner {
+
+    height: 180px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.90),
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.75)
+        ),
+
+        url("https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.technology-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.15);
+}
+
+
+.technology-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    height: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+.technology-image {
+
+    width: 190px;
+
+    height: 150px;
+
+    overflow: hidden;
+
+    border-radius: 2px;
+}
+
+
+.technology-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.technology-content {
+
+    color: white;
+}
+
+
+.technology-content span {
+
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+.technology-content h2 {
+
+    font-family: "Cinzel", serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    margin: 4px 0;
+}
+
+
+.technology-content p {
+
+    color: #dddddd;
+
+    font-size: 9px;
+
+    margin-bottom: 10px;
+}
+
+
+.technology-btn {
+
+    display: inline-block;
+
+    background: var(--gold);
+
+    color: #111111;
+
+    padding: 7px 18px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    border-radius: 2px;
+}
+
+
+.technology-btn:hover {
+
+    background: var(--gold-light);
+}
+
+
+/* =========================================================
+                    QUICK NAVIGATION
+========================================================= */
+
+.quick-navigation {
+
+    background: var(--cream);
+
+    padding: 10px 20px;
+}
+
+
+.quick-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 5px;
+}
+
+
+.quick-box {
+
+    background: #fffdf7;
+
+    min-height: 68px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #e7dfd0;
+
+    color: #222222;
+
+    transition: 0.3s ease;
+}
+
+
+.quick-box:hover {
+
+    border-color: var(--gold);
+
+    background: #fff8e8;
+
+    transform: translateY(-2px);
+}
+
+
+.quick-box i {
+
+    color: var(--gold-dark);
+
+    font-size: 17px;
+
+    margin-bottom: 4px;
+}
+
+
+.quick-box h3 {
+
+    font-size: 8px;
+
+    margin-bottom: 3px;
+}
+
+
+.quick-box p {
+
+    color: #777777;
+
+    font-size: 7px;
+}
+
+
+/* =========================================================
+                    TRUSTED BRANDS
+========================================================= */
+
+.brands {
+
+    background: var(--cream);
+
+    padding: 12px 20px 25px;
+}
+
+
+.brands-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+.brand-list {
+
+    margin-top: 15px;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    background: white;
+
+    border: 1px solid #e2dac9;
+}
+
+
+.brand-name {
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-right: 1px solid #e4ddce;
+
+    color: #222222;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.brand-name:last-child {
+
+    border-right: none;
+}
+
+
+.brand-name i {
+
+    margin-right: 5px;
+
+    font-size: 13px;
+}
+
+/* =========================================================
+                          FOOTER
+========================================================= */
+
+.footer {
+
+    background: #080808;
+
+    border-top: 1px solid rgba(200, 155, 60, 0.4);
+
+    padding: 55px 0 0;
+
+}
+
+
+.footer-row {
+
+    row-gap: 35px;
+
+}
+
+
+.footer-brand {
+
+    padding-right: 25px;
+
+}
+
+
+.footer-crown {
+
+    color: var(--gold);
+
+    font-size: 30px;
+
+}
+
+
+.footer-brand h2 {
+
+    font-family: "Cinzel", serif;
+
+    color: var(--gold-light);
+
+    letter-spacing: 3px;
+
+    font-size: 24px;
+
+    margin: 0;
+
+}
+
+
+.footer-brand span {
+
+    color: #aaaaaa;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.footer-brand p {
+
+    color: #888888;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-top: 15px;
+
+    max-width: 300px;
+
+}
+
+
+/* =========================================================
+                      FOOTER LINKS
+========================================================= */
+
+.footer-links h3 {
+
+    color: var(--gold-light);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 16px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.footer-links a {
+
+    display: block;
+
+    color: #999999;
+
+    font-size: 12px;
+
+    margin-bottom: 11px;
+
+    transition: 0.3s;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--gold-light);
+
+    padding-left: 4px;
+
+}
+
+
+.footer-links p {
+
+    color: #888888;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+                       SOCIAL ICONS
+========================================================= */
+
+.social-icons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 17px;
+
+}
+
+
+.social-icons a {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 1px solid #6d531f;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--gold-light);
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.social-icons a:hover {
+
+    background: var(--gold);
+
+    color: #111111;
+
+    padding: 0;
+
+}
+
+
+/* =========================================================
+                     FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+
+    margin-top: 45px;
+
+    padding: 18px 0;
+
+    border-top: 1px solid #242424;
+
+    text-align: center;
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 10px;
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .footer {
+
+        padding-top: 45px;
+
+    }
+
+
+    .footer-brand {
+
+        padding-right: 0;
+
+    }
+
+}
+
+/* =========================================================
+                    LARGE DESKTOP
+========================================================= */
+
+@media screen and (max-width: 1250px) {
+
+
+    .nav-container {
+
+        padding: 0 18px;
+
+    }
+
+
+    .nav-menu {
+
+        gap: 13px;
+
+    }
+
+
+    .nav-menu a {
+
+        font-size: 9px;
+
+    }
+
+
+    .brand-logo {
+
+        min-width: 165px;
+
+    }
+
+
+.visitor-counter {
+        padding: 6px 10px;
+        gap: 6px;
+    }
+
+    .visitor-counter i {
+        font-size: 14px;
+    }
+    .visitor-counter span {
+
+        font-size: 10px;
+
+    }
+   .visitor-counter strong {
+        font-size: 11px;
+    }
+
+    .watch-grid {
+
+        gap: 10px;
+
+    }
+
+}
+
+
+/* =========================================================
+                         TABLET
+========================================================= */
+
+@media screen and (max-width: 991px) {
+
+
+    /* NAVBAR */
+
+    .navbar {
+
+        height: 68px;
+
+    }
+
+
+    .nav-container {
+
+        padding: 0 20px;
+
+    }
+
+
+    .menu-icon {
+
+        display: block;
+
+        margin-left: 10px;
+
+        order: 4;
+
+    }
+
+
+    .visitor-counter {
+
+        margin-left: auto;
+
+        order: 3;
+
+    }
+
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 68px;
+
+        left: 0;
+
+        width: 100%;
+
+        height: auto;
+
+        background: #080808;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 25px 18px;
+
+        border-top: 1px solid #3b2c13;
+
+    }
+
+
+    #menu-toggle:checked ~ .nav-menu {
+
+        display: flex;
+
+    }
+
+
+    .nav-menu a {
+
+        height: auto;
+
+        min-height: 43px;
+
+        display: flex;
+
+        align-items: center;
+
+        border-bottom: 1px solid #222222;
+
+        font-size: 12px;
+
+        padding: 0 5px;
+
+    }
+
+
+    .nav-menu a.active::after {
+
+        display: none;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        height: 300px;
+
+    }
+
+
+    .hero-container {
+
+        padding: 0 35px;
+
+    }
+
+
+    /* WATCHES */
+
+    .watch-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .watch-image {
+
+        height: 220px;
+
+    }
+
+
+    /* TECHNOLOGY */
+
+    .technology-container {
+
+        padding: 0 25px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+                          MOBILE
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+
+    /* NAVBAR */
+
+    .navbar {
+
+        height: 64px;
+
+    }
+
+
+    .nav-container {
+
+        padding: 0 13px;
+
+        gap: 7px;
+
+    }
+
+
+    .brand-logo {
+
+        min-width: auto;
+
+        gap: 5px;
+
+    }
+
+
+    .crown {
+
+        font-size: 19px;
+
+    }
+
+
+    .brand-text span {
+
+        font-size: 15px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .brand-text small {
+
+        font-size: 5px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .visitor-counter {
+
+        padding: 5px 7px;
+
+        min-width: auto;
+
+        gap: 4px;
+
+    }
+
+
+    .visitor-counter i {
+
+        font-size: 10px;
+
+    }
+
+
+    .visitor-counter span {
+
+        display: none;
+
+    }
+
+
+    .visitor-counter strong {
+
+        font-size: 8px;
+
+    }
+
+
+    .menu-icon {
+
+        font-size: 22px;
+
+        margin-left: 3px;
+
+    }
+
+
+    .nav-menu {
+
+        top: 64px;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        height: 260px;
+
+        background-position: center;
+
+    }
+
+
+    .hero-container {
+
+        padding: 0 25px;
+
+    }
+
+
+    .hero-content {
+
+        max-width: 90%;
+
+    }
+
+
+    .hero-small {
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 9px;
+
+        max-width: 260px;
+
+    }
+
+
+    .hero-btn {
+
+        font-size: 8px;
+
+        padding: 8px 13px;
+
+    }
+
+
+    .hero-arrow {
+
+        font-size: 17px;
+
+    }
+
+
+    /* CATEGORIES */
+
+    .categories {
+
+        padding: 8px;
+
+    }
+
+
+    .category-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 3px;
+
+    }
+
+
+    .category-box {
+
+        min-height: 45px;
+
+        border: none;
+
+        font-size: 8px;
+
+    }
+
+
+    .category-box i {
+
+        font-size: 14px;
+
+    }
+
+
+    /* INTRO */
+
+    .introduction {
+
+        padding: 22px 15px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .intro-text {
+
+        font-size: 9px;
+
+        line-height: 1.8;
+
+    }
+
+
+    /* FEATURED */
+
+    .featured {
+
+        padding: 5px 12px 25px;
+
+    }
+
+
+    .watch-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 9px;
+
+    }
+
+
+    .watch-image {
+
+        height: 145px;
+
+    }
+
+
+    .watch-content h3 {
+
+        font-size: 9px;
+
+    }
+
+
+    .watch-type {
+
+        font-size: 6px;
+
+    }
+
+
+    .watch-content strong {
+
+        font-size: 8px;
+
+    }
+
+
+    .watch-btn {
+
+        font-size: 6px;
+
+        padding: 5px 10px;
+
+    }
+
+
+    /* TECHNOLOGY */
+
+    .technology-banner {
+
+        height: 180px;
+
+    }
+
+
+    .technology-container {
+
+        padding: 0 15px;
+
+        gap: 15px;
+
+    }
+
+
+    .technology-image {
+
+        width: 130px;
+
+        height: 110px;
+
+    }
+
+
+    .technology-content span {
+
+        font-size: 6px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .technology-content h2 {
+
+        font-size: 19px;
+
+    }
+
+
+    .technology-content p {
+
+        font-size: 7px;
+
+    }
+
+
+    .technology-btn {
+
+        font-size: 7px;
+
+        padding: 6px 12px;
+
+    }
+
+
+    /* QUICK NAVIGATION */
+
+    .quick-navigation {
+
+        padding: 7px;
+
+    }
+
+
+    .quick-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 4px;
+
+    }
+
+
+    .quick-box {
+
+        min-height: 65px;
+
+    }
+
+
+    /* BRANDS */
+
+    .brands {
+
+        padding: 15px 10px 25px;
+
+    }
+
+
+    .brand-list {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .brand-name {
+
+        min-height: 45px;
+
+        font-size: 10px;
+
+        border-bottom: 1px solid #e4ddce;
+
+    }
+
+
+    .brand-name:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .brand-name:last-child {
+
+        border-right: none;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding-top: 35px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+    }
+
+
+    .footer-brand > p {
+
+        max-width: 100%;
+
+    }
+
+
+}
+
+
+/* =========================================================
+                     SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+
+    .brand-text span {
+
+        font-size: 13px;
+
+    }
+
+
+    .crown {
+
+        font-size: 17px;
+
+    }
+
+
+    .visitor-counter {
+
+        padding: 4px 6px;
+
+    }
+
+
+    .menu-icon {
+
+        font-size: 20px;
+
+    }
+
+
+    .hero {
+
+        height: 235px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 8px;
+
+    }
+
+
+    .watch-grid {
+
+        gap: 6px;
+
+    }
+
+
+    .watch-image {
+
+        height: 125px;
+
+    }
+
+
+    .technology-image {
+
+        width: 105px;
+
+        height: 95px;
+
+    }
+
+
+    .technology-content h2 {
+
+        font-size: 16px;
+
+    }
+
+
+}
+
+/* =========================================================
+                    NAVBAR
+========================================================= */
+
+.navbar-custom {
+
+    width: 100%;
+    height: 74px;
+
+    background: #080808;
+
+    border-bottom: 1px solid rgba(200, 155, 60, 0.45);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 9999;
+
+}
+
+
+/* =========================================================
+                  NAV CONTAINER
+========================================================= */
+
+.nav-container {
+
+    width: 100%;
+    max-width: 1450px;
+
+    height: 100%;
+
+    margin: auto;
+
+    padding: 0 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+/* =========================================================
+                       LOGO
+========================================================= */
+
+.brand-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 175px;
+
+}
+
+
+.crown {
+
+    color: #e4bd69;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.brand-text span {
+
+    color: #e4bd69;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    line-height: 20px;
+
+}
+
+
+.brand-text small {
+
+    color: #d4d4d4;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+                      NAV MENU
+========================================================= */
+
+.nav-menu {
+
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 27px;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.nav-menu li {
+
+    position: relative;
+
+    height: 74px;
+
+}
+
+
+.nav-menu li a {
+
+    height: 74px;
+
+    display: flex;
+
+    align-items: center;
+
+    color: #eeeeee;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    position: relative;
+
+    transition: 0.3s ease;
+
+}
+
+
+.nav-menu li a:hover {
+
+    color: #e4bd69;
+
+}
+
+
+/* ACTIVE PAGE */
+
+.nav-menu li a.active {
+
+    color: #e4bd69;
+
+}
+
+
+.nav-menu li a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background: #c89b3c;
+
+}
+
+
+/* =========================================================
+                  PRODUCTS ARROW
+========================================================= */
+
+.nav-menu li a i {
+
+    font-size: 8px;
+
+    margin-left: 6px;
+
+}
+
+
+/* =========================================================
+                    DROPDOWN
+========================================================= */
+
+.dropdown-menu-custom {
+
+    position: relative;
+
+}
+
+
+.dropdown-box {
+
+    position: absolute;
+
+    top: 62px;
+
+    left: -20px;
+
+    width: 190px;
+
+    background: #111111;
+
+    border: 1px solid rgba(200, 155, 60, 0.4);
+
+    padding: 10px 0;
+
+    display: none;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+
+.dropdown-box a {
+
+    width: 100%;
+
+    height: auto !important;
+
+    display: block !important;
+
+    padding: 12px 18px !important;
+
+    color: #eeeeee !important;
+
+    font-size: 12px !important;
+
+}
+
+
+.dropdown-box a:hover {
+
+    background: #1d1d1d;
+
+    color: #e4bd69 !important;
+
+}
+
+
+.dropdown-menu-custom:hover .dropdown-box {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+                  VISITOR COUNTER
+========================================================= */
+
+.visitor-counter {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    border: 1px solid #98701f;
+
+    border-radius: 4px;
+
+    background: transparent;
+
+    white-space: nowrap;
+
+}
+
+
+.visitor-counter i {
+
+    color: #c89b3c;
+
+    font-size: 14px;
+
+}
+
+
+.visitor-counter span {
+
+    color: #dddddd;
+
+    font-size: 10px;
+
+}
+
+
+.visitor-counter strong {
+
+    color: #e4bd69;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+                    MOBILE BUTTON
+========================================================= */
+
+#menu-toggle {
+
+    display: none;
+
+}
+
+
+.menu-icon {
+
+    display: none;
+
+    color: #e4bd69;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+                        FOOTER
+========================================================= */
+
+.footer {
+
+    width: 100%;
+
+    background: #080808;
+
+    border-top: 1px solid rgba(200, 155, 60, 0.4);
+
+    padding-top: 38px;
+
+}
+
+
+/* =========================================================
+                  FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 25px 30px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+
+    gap: 35px;
+
+}
+
+
+/* =========================================================
+                   FOOTER BRAND
+========================================================= */
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+}
+
+
+.footer-crown {
+
+    color: #c89b3c;
+
+    font-size: 29px;
+
+}
+
+
+.footer-logo h2 {
+
+    color: #e4bd69;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+
+    margin: 0;
+
+}
+
+
+.footer-logo span {
+
+    color: #888888;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.footer-brand > p {
+
+    max-width: 280px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    margin-top: 14px;
+
+}
+
+
+/* =========================================================
+                   FOOTER COLUMNS
+========================================================= */
+
+.footer-column h3 {
+
+    color: #e4bd69;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-column a {
+
+    display: block;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    margin-bottom: 9px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.footer-column a:hover {
+
+    color: #e4bd69;
+
+    padding-left: 4px;
+
+}
+
+
+.footer-column p {
+
+    color: #777777;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================================
+                    SOCIAL ICONS
+========================================================= */
+
+.social-icons {
+
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: 15px;
+
+}
+
+
+.social-icons a {
+
+    width: 29px;
+
+    height: 29px;
+
+    border: 1px solid #654d1c;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #e4bd69;
+
+    font-size: 10px;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+}
+
+
+.social-icons a:hover {
+
+    background: #c89b3c;
+
+    color: #111111;
+
+}
+
+
+/* =========================================================
+                    FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+
+    width: 100%;
+
+    border-top: 1px solid #252525;
+
+    text-align: center;
+
+    padding: 14px 15px;
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: #5f5f5f;
+
+    font-size: 8px;
+
+}
+
+
+/* =========================================================
+                 LARGE DESKTOP
+========================================================= */
+
+@media screen and (max-width: 1250px) {
+
+    .nav-container {
+
+        padding: 0 20px;
+
+    }
+
+
+    .nav-menu {
+
+        gap: 16px;
+
+    }
+
+
+    .nav-menu li a {
+
+        font-size: 11px;
+
+    }
+
+
+    .brand-logo {
+
+        min-width: 155px;
+
+    }
+
+
+    .visitor-counter {
+
+        padding: 6px 9px;
+
+    }
+
+}
+
+
+/* =========================================================
+                       TABLET
+========================================================= */
+
+@media screen and (max-width: 991px) {
+
+    .navbar-custom {
+
+        height: 70px;
+
+    }
+
+
+    .nav-container {
+
+        padding: 0 20px;
+
+    }
+
+
+    .brand-logo {
+
+        min-width: auto;
+
+    }
+
+
+    /* MOBILE ICON */
+
+    .menu-icon {
+
+        display: block;
+
+        order: 3;
+
+        margin-left: 10px;
+
+    }
+
+
+    /* VISITOR */
+
+    .visitor-counter {
+
+        order: 2;
+
+        margin-left: auto;
+
+    }
+
+
+    /* NAVIGATION */
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        height: auto;
+
+        background: #080808;
+
+        border-top: 1px solid #332713;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 25px 18px;
+
+    }
+
+
+    #menu-toggle:checked ~ .nav-menu {
+
+        display: flex;
+
+    }
+
+
+    .nav-menu li {
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+
+    .nav-menu li a {
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 44px;
+
+        display: flex;
+
+        align-items: center;
+
+        padding: 12px 5px;
+
+        border-bottom: 1px solid #222222;
+
+    }
+
+
+    .nav-menu li a.active::after {
+
+        display: none;
+
+    }
+
+
+    /* MOBILE DROPDOWN */
+
+    .dropdown-box {
+
+        position: static;
+
+        width: 100%;
+
+        background: #111111;
+
+        border: none;
+
+        box-shadow: none;
+
+        padding: 0;
+
+    }
+
+
+    .dropdown-box a {
+
+        min-height: 40px !important;
+
+        padding: 10px 20px !important;
+
+        border-bottom: 1px solid #222222;
+
+    }
+
+
+    .dropdown-menu-custom:hover .dropdown-box {
+
+        display: block;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px 25px;
+
+    }
+
+}
+
+
+/* =========================================================
+                       MOBILE
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    .navbar-custom {
+
+        height: 65px;
+
+    }
+
+
+    .nav-container {
+
+        padding: 0 15px;
+
+        gap: 8px;
+
+    }
+
+
+    .crown {
+
+        font-size: 22px;
+
+    }
+
+
+    .brand-text span {
+
+        font-size: 17px;
+
+    }
+
+
+    .brand-text small {
+
+        font-size: 5px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .visitor-counter {
+
+        padding: 5px 8px;
+
+        gap: 5px;
+
+    }
+
+
+    .visitor-counter i {
+
+        font-size: 11px;
+
+    }
+
+
+    .visitor-counter span {
+
+        font-size: 7px;
+
+    }
+
+
+    .visitor-counter strong {
+
+        font-size: 8px;
+
+    }
+
+
+    .menu-icon {
+
+        font-size: 23px;
+
+    }
+
+
+    .nav-menu {
+
+        top: 65px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding-top: 32px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px 20px;
+
+        padding: 0 20px 25px;
+
+    }
+
+
+    .footer-logo h2 {
+
+        font-size: 19px;
+
+    }
+
+
+    .footer-brand > p {
+
+        font-size: 9px;
+
+    }
+
+
+    .footer-column h3 {
+
+        font-size: 12px;
+
+    }
+
+
+    .footer-column a,
+    .footer-column p {
+
+        font-size: 9px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+                    SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+    .brand-text span {
+
+        font-size: 15px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .brand-text small {
+
+        font-size: 4px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .crown {
+
+        font-size: 19px;
+
+    }
+
+
+    .visitor-counter span {
+
+        display: none;
+
+    }
+
+
+    .visitor-counter {
+
+        padding: 5px 7px;
+
+    }
+
+
+    .menu-icon {
+
+        font-size: 22px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+
+    .footer-brand > p {
+
+        max-width: 100%;
+
+    }
+
+}
+
+/* =========================================================
+                    LARGE DESKTOP
+========================================================= */
+
+@media screen and (max-width: 1250px) {
+
+    .nav-container {
+
+        padding: 0 20px;
+
+    }
+
+
+    .nav-menu {
+
+        gap: 17px;
+
+    }
+
+
+    .nav-menu li a {
+
+        font-size: 11px;
+
+    }
+
+
+    .nav-right {
+
+        gap: 9px;
+
+    }
+
+}
+
+
+/* =========================================================
+                         TABLET
+========================================================= */
+
+@media screen and (max-width: 991px) {
+
+    .navbar-custom {
+
+        height: 70px;
+
+    }
+
+
+    .nav-container {
+
+        padding: 0 22px;
+
+    }
+
+
+    .menu-icon {
+
+        display: block;
+
+        margin-left: auto;
+
+        margin-right: 15px;
+
+        order: 3;
+
+    }
+
+
+    .nav-right {
+
+        order: 2;
+
+        min-width: auto;
+
+    }
+
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #080808;
+
+        border-top: 1px solid #332713;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 12px 25px 20px;
+
+    }
+
+
+    .nav-menu li {
+
+        width: 100%;
+
+    }
+
+
+    .nav-menu li a {
+
+        display: block;
+
+        padding: 13px 5px;
+
+        border-bottom: 1px solid #222222;
+
+    }
+
+
+    .nav-menu li a.active::after {
+
+        display: none;
+
+    }
+
+
+    #menu-toggle:checked ~ .nav-menu {
+
+        display: flex;
+
+    }
+
+
+    .dropdown-box {
+
+        position: static;
+
+        width: 100%;
+
+        border: none;
+
+        box-shadow: none;
+
+        background: #111111;
+
+    }
+
+
+    .dropdown-menu-custom:hover .dropdown-box {
+
+        display: block;
+
+    }
+
+}
+
+
+/* =========================================================
+                         MOBILE
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    .navbar-custom {
+
+        height: 65px;
+
+    }
+
+
+    .nav-container {
+
+        padding: 0 15px;
+
+    }
+
+
+    .brand-logo {
+
+        min-width: auto;
+
+    }
+
+
+    .brand-text span {
+
+        font-size: 17px;
+
+    }
+
+
+    .brand-text small {
+
+        font-size: 6px;
+
+    }
+
+
+    .crown {
+
+        font-size: 23px;
+
+    }
+
+
+    .nav-right {
+
+        gap: 8px;
+
+    }
+
+
+    .visitor-counter {
+
+        padding: 6px 8px;
+
+        gap: 5px;
+
+    }
+
+
+    .visitor-counter i {
+
+        font-size: 13px;
+
+    }
+
+
+    .visitor-counter span {
+
+        font-size: 9px;
+
+    }
+
+
+    .visitor-counter strong {
+
+        font-size: 10px;
+
+    }
+
+
+    .menu-icon {
+
+        margin-right: 0;
+
+    }
+
+
+    .nav-menu {
+
+        top: 65px;
+
+    }
+
+}
+
+
+/* =========================================================
+                    SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+    .brand-text span {
+
+        font-size: 15px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .brand-text small {
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .crown {
+
+        font-size: 20px;
+
+    }
+
+
+    .nav-right {
+
+        gap: 4px;
+
+    }
+
+
+    .visitor-counter {
+
+        padding: 5px 7px;
+
+        gap: 4px;
+
+    }
+
+
+    .visitor-counter i {
+
+        font-size: 12px;
+
+    }
+
+
+    .visitor-counter span {
+
+        font-size: 8px;
+
+    }
+
+
+    .visitor-counter strong {
+
+        font-size: 9px;
+
+    }
+
+
+    .menu-icon {
+
+        font-size: 25px;
+
+    }
+
+}
