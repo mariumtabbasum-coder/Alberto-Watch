@@ -138,6 +138,10 @@
                     <a href="products.html">
                         Smart Watches
                     </a>
+                    <a href="products.html">
+                        Vintage Watches
+                    </a>
+                
 
                 </div>
 
@@ -266,74 +270,154 @@
                         HERO SECTION
 ========================================================= -->
 
+<!-- =========================================================
+                        HERO SLIDER
+========================================================= -->
+
 <section class="hero">
 
-    <div class="hero-overlay"></div>
+    <div class="hero-slider" id="heroSlider">
 
+        <!-- SLIDE 1 -->
+        <div class="hero-slide active-slide"
+             style="background-image: url('https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1600&q=85');">
 
-    <div class="hero-container">
+            <div class="hero-overlay"></div>
 
+            <div class="hero-container">
 
-        <!-- LEFT CONTENT -->
+                <div class="hero-content">
 
-        <div class="hero-content">
+                    <p class="hero-small">
+                        ALBERTO WATCH COMPANY
+                    </p>
 
-            <p class="hero-small">
-                ALBERTO WATCH COMPANY
-            </p>
+                    <h1>
+                        Timeless Beauty
+                        <br>
+                        Engineered for Excellence
+                    </h1>
 
+                    <p class="hero-description">
+                        Discover the world of luxury timepieces
+                        with Alberto Watch Company.
+                    </p>
 
-            <h1>
-                Timeless Beauty
-                <br>
-                Engineered for Excellence
-            </h1>
+                    <a href="products.html" class="hero-btn">
+                        Explore Products
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
 
+                </div>
 
-            <p class="hero-description">
-                Discover the world of luxury timepieces
-                with Alberto Watch Company.
-            </p>
-
-
-            <a
-                href="products.html"
-                class="hero-btn"
-            >
-                Explore Products
-                <i class="fa-solid fa-angle-right"></i>
-            </a>
-
+            </div>
         </div>
 
 
-        <!-- SLIDER ARROWS -->
+        <!-- SLIDE 2 -->
+        <div class="hero-slide"
+             style="background-image: url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1600&q=85');">
 
-        <button class="hero-arrow hero-left">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <p class="hero-small">
+                        PRECISION &amp; CRAFTSMANSHIP
+                    </p>
+
+                    <h1>
+                        Designed for
+                        <br>
+                        Timeless Moments
+                    </h1>
+
+                    <p class="hero-description">
+                        Elegant design and exceptional craftsmanship
+                        created for every occasion.
+                    </p>
+
+                    <a href="products.html" class="hero-btn">
+                        View Collection
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- SLIDE 3 -->
+        <div class="hero-slide"
+             style="background-image: url('https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=1600&q=85');">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <p class="hero-small">
+                        INNOVATION MEETS ELEGANCE
+                    </p>
+
+                    <h1>
+                        Technology
+                        <br>
+                        Meets Luxury
+                    </h1>
+
+                    <p class="hero-description">
+                        Modern watch technology combined with
+                        sophisticated luxury design.
+                    </p>
+
+                    <a href="technology.html" class="hero-btn">
+                        Explore Technology
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- LEFT ARROW -->
+        <button class="hero-arrow hero-left" id="prevSlide" type="button">
             <i class="fa-solid fa-angle-left"></i>
         </button>
 
-        <button class="hero-arrow hero-right">
+
+        <!-- RIGHT ARROW -->
+        <button class="hero-arrow hero-right" id="nextSlide" type="button">
             <i class="fa-solid fa-angle-right"></i>
         </button>
 
 
-        <!-- SLIDER DOTS -->
-
+        <!-- DOTS -->
         <div class="hero-dots">
 
-            <span class="dot active-dot"></span>
+            <button class="dot active-dot"
+                    type="button"
+                    data-slide="0"></button>
 
-            <span class="dot"></span>
+            <button class="dot"
+                    type="button"
+                    data-slide="1"></button>
 
-            <span class="dot"></span>
+            <button class="dot"
+                    type="button"
+                    data-slide="2"></button>
 
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -988,7 +1072,7 @@
 
 </footer>
 
-
+<script src="javascript/index.js"></script>
 </body>
 
 </html>
