@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mariumtabbasum-coder.github.io/Alberto-Watch-Company/sitemap.xml
